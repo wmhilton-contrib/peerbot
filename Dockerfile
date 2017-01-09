@@ -12,5 +12,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libnss3 \
     libasound2 \
     && rm -rf /var/lib/apt/lists/*
+RUN npm install -g node-gyp
 RUN npm install -g electron-prebuilt electron-spawn github:wmhilton/peerbot#dockerize
 ENTRYPOINT xvfb-run peerbot
