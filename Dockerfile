@@ -1,4 +1,4 @@
-FROM node:0.12
+FROM node:6
 # git clone -b dockerize https://github.com/wmhilton/peerbot && cd peerbot
 # !!! WARNING !!! I have no idea if this works yet!!!
 RUN apt-get update && apt-get install -y --no-install-recommends \
