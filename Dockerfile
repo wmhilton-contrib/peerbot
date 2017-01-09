@@ -11,7 +11,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgconf-2-4 \
     libnss3 \
     libasound2 \
+    libXss1 \
     && rm -rf /var/lib/apt/lists/*
 RUN npm install -g node-gyp electron-prebuilt electron-spawn
-RUN npm install -g github:wmhilton/peerbot#dockerize
+COPY . .
+RUN npm install -g
 ENTRYPOINT xvfb-run peerbot
