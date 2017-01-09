@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict'
 var pkg = require('./package.json')
 var exec = require('child_process').exec
