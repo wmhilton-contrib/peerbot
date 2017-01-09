@@ -18,4 +18,5 @@ COPY . /tmp/stuff
 RUN npm install -g github:wmhilton/peerbot#dockerize
 # fuck it
 RUN cd /usr/local/lib/node_modules/peerbot/node_modules/leveldown && node-gyp rebuild --target=0.36.10 --arch=x64 --dist-url=https://atom.io/download/atom-shell
-ENTRYPOINT xvfb-run peerbot
+CMD xvfb-run peerbot
+EXPOSE 80 443 3478 19302
