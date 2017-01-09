@@ -10,7 +10,6 @@
     "url": "https://github.com/moose-team/peerbot/issues"
   },
   "dependencies": {
-    "electron-spawn": "5.0.0",
     "end-of-stream": "^1.1.0",
     "friends-swarm": "^1.0.0",
     "ghsign": "^1.2.2",
@@ -30,7 +29,6 @@
     "webrtc-swarm": "^1.2.0"
   },
   "devDependencies": {
-    "electron-prebuilt": "0.36.10",
     "standard": "*"
   },
   "homepage": "https://github.com/moose-team/peerbot",

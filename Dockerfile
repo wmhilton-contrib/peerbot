@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libasound2 \
     libXss1 \
     && rm -rf /var/lib/apt/lists/*
-RUN npm install -g node-gyp electron-prebuilt electron-spawn
+RUN npm install -g node-gyp electron-prebuilt@0.36.10 electron-spawn
 COPY . /tmp/stuff
 RUN npm install -g github:wmhilton/peerbot#dockerize
 # fuck it
