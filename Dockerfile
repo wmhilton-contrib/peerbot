@@ -14,7 +14,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libXss1 \
     && rm -rf /var/lib/apt/lists/*
 RUN npm install -g node-gyp electron-prebuilt electron-spawn
-WORKDIR /root
-COPY . .
-RUN npm install -g
+COPY . /tmp/stuff
+RUN npm install -g github:wmhilton/peerbot#dockerize
 ENTRYPOINT xvfb-run peerbot
