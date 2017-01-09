@@ -4,7 +4,7 @@
   "version": "0.1.2",
   "author": "MOOSE Team",
   "bin": {
-    "peerbot": "./bin/cli.js",
+    "peerbot": "./bin/cli.js"
   },
   "bugs": {
     "url": "https://github.com/moose-team/peerbot/issues"
