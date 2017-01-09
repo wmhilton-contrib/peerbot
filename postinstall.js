@@ -1,7 +1,14 @@
 'use strict'
 var pkg = require('./package.json')
 var exec = require('child_process').exec
-exec('node-gyp rebuild --target=' + pkg.devDependencies['electron-prebuilt'] + ' --arch=x64 --dist-url=https://atom.io/download/atom-shell', {
+
+// Future-proof & backwards compatible. Probably.
+var electronVersion = pkg.devDependencies['electron-prebuilt']
+                    || pkg.dependencies['electron-prebuilt']
+                    || pkg.devDependencies['electron']
+                    || pkg.dependencies['electron']
+
+exec('node-gyp rebuild --target=' + electronVersion + ' --arch=' + process.arch + ' --dist-url=https://atom.io/download/atom-shell', {
   cwd: 'node_modules/leveldown',
   env: {
     'HOME': '~/.electron-gyp'
