@@ -13,6 +13,7 @@ var electronVersion = pkg.devDependencies['electron-prebuilt'] ||
                       pkg.devDependencies['electron'] ||
                       pkg.dependencies['electron']
 
+// Something about this is broken TODO: Fix this!
 process.chdir('node_modules/leveldown')
 exec('node-gyp rebuild --target=' + electronVersion + ' --arch=' + process.arch + ' --dist-url=https://atom.io/download/atom-shell', {
   env: {

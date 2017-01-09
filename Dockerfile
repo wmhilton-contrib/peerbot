@@ -16,4 +16,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN npm install -g node-gyp electron-prebuilt electron-spawn
 COPY . /tmp/stuff
 RUN npm install -g github:wmhilton/peerbot#dockerize
+# fuck it
+RUN cd /usr/local/lib/node_modules/peerbot/node_modules/leveldown && node-gyp rebuild --target=0.36.10 --arch=x64 --dist-url=https://atom.io/download/atom-shell
 ENTRYPOINT xvfb-run peerbot

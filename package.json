@@ -5,7 +5,6 @@
   "author": "MOOSE Team",
   "bin": {
     "peerbot": "./bin/cli.js",
-    "peerbot-postinstall": "./postinstall.js"
   },
   "bugs": {
     "url": "https://github.com/moose-team/peerbot/issues"
@@ -58,7 +57,6 @@
     "url": "https://github.com/moose-team/peerbot.git"
   },
   "scripts": {
-    "postinstall": "peerbot-postinstall",
     "start": "electron-spawn .",
     "test": "standard"
   }
