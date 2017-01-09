@@ -2,7 +2,7 @@
 'use strict'
 
 var path = require('path')
-process.chdir(path.join(__dirname, '..'))
+process.chdir(path.join(__dirname))
 
 var pkg = require('./package.json')
 var exec = require('child_process').exec
